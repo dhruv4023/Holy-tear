@@ -12,7 +12,8 @@
     min-height: 100vh;
     overflow: hidden;
     background: transparent;
-    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0.521);
+    z-index: 100;
 }
 
 .loader span {
