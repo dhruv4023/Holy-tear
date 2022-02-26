@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/CSS/csss.css">
+    <link rel="stylesheet" href="/CSS/animation.css">
+</head>
+<style>
+    /* container */
+    .Container {
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.226);
+        min-height: 98vh;
+        z-index: -1;
+    }
+    #Home,
+    #About,
+    #Contact {
+        display: none;
+    }
+
+    #Home,
+    #About,
+    #Contact {
+        margin-top: 6.5rem;
+        margin-left: 4rem;
+        /* border-top-left-radius: 50%; */
+        /* border-bottom-left-radius: 5%; */
+        /* border: 2px solid rgba(0, 0, 0, 0.048); */
+        min-height: 85vh;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20rem;
+        font-size: 4rem;
+    }
+</style>
+
+<body>
+
+    
+    <section>
+        <div class="header">
+            <div class="burger" onclick="navigationBar()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <h1>
+                HolY TeaR
+            </h1>
+            <div id="searchDiv">
+                <form action="" method="get">
+                    <input class="search" type="search" name="search" id="searchBox" placeholder="Search... ">
+                    <button class="search" id="searchBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div Id="navBar">
+        <i class="navItem" onclick="homeCnt()">Home</i>
+        <i class="navItem" onclick="aboutCnt()">About</i>
+        <i class="navItem" onclick="contactCnt()">Contact</i>
+    </div>
+    <section class="Container" onclick="hideNavigationBar()">
+        <div id="load">
+            <div class="loader" onclick="homeCnt()">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+                <span style="--i:4;"></span>
+                <span style="--i:5;"></span>
+                <span style="--i:6;"></span>
+                <span style="--i:7;"></span>
+                <span style="--i:8;"></span>
+                <span style="--i:9;"></span>
+                <span style="--i:10;"></span>
+            </div>  
+        </div>     
+        <div id="Home">
+            <h2>
+                Welcome To Our Website Home
+            </h2>
+
+        </div>
+        <div id="About">
+            <h2>
+                Welcome To Our Website About
+            </h2>
+
+        </div>
+        <div id="Contact">
+            <h2>
+                Welcome To Our Website Contact
+            </h2>
+
+        </div>
+    </section>
+</body>
+<script src="./JS/navBar.js"></script>
+<script>
+
+</script>
+
+</html>

@@ -1,0 +1,125 @@
+/* header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 0.8rem;
+}
+.header {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  background-color: greenyellow;
+  border-bottom-left-radius: 1000%;
+}
+h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: right;
+  flex-grow: 2;
+  color:rgb(61, 5, 134);
+  padding: 1.5rem;
+  text-emphasis-color: red;
+  text-shadow: 2px 2px rgba(50, 53, 205, 0.774);
+}
+/* navigation */
+#navBar {
+  top: 0;
+  position: fixed;
+  background-color: rgba(12, 12, 238, 0.575);
+  height: 100vh;
+  width: 10rem;
+  /* display: flex; */
+  flex-direction: column;
+  border-top-right-radius: 1000%;
+  border-bottom-right-radius: 0%;
+  justify-content: space-evenly;
+  display: none;
+  transition-property: all;
+  transition-delay: 2s;
+  transition-duration: 5s;
+}
+
+.navItem {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 1s;
+}
+
+.navItem:hover {
+    color: rgb(224, 93, 45);
+}
+
+.line {
+  background-color: whitesmoke;
+  width: 30px;
+  height: 5px;
+  margin: 0.5rem;
+  border-radius: 100%;
+}
+
+.burger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  cursor: pointer;
+  border-radius: 100%;
+  background-color: blue;
+  padding: 0.2rem;
+}
+/*--------------------- search ---------------------*/
+#searchDiv {
+  padding: 2rem;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  --x: 0.7rem;
+  float: left;
+  padding: 0.3rem;
+  font-size: 1.1rem;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+#searchBtn {
+  border-top-right-radius: var(--x);
+  border-bottom-right-radius: var(--x);
+  color: rgb(231, 227, 227);
+  background-color: rgb(49, 49, 49);
+  font-weight: bold;
+}
+
+#searchBtn:hover {
+  color: orange;
+  transition: color 2s;
+  background-color: rgb(32, 25, 25);
+}
+
+#searchBox {
+  border-top-left-radius: var(--x);
+  border-bottom-left-radius: var(--x);
+  background-color: whitesmoke;
+  color: black;
+  width: 15vw;
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 0.4rem;
+  }
+}
