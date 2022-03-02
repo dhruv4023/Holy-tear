@@ -7,51 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="./CSS/csss.css">
-    <link rel="stylesheet" href="./CSS/animation.css">
+    <link rel="stylesheet" href="./CSS/formCss.css">
 </head>
 <style>
     /* container */
     .Container {
         padding: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.226);
-        min-height: 98vh;
+        background-color: rgba(0, 0, 0, 0.548);
+        min-height: 100vh;
         z-index: -1;
     }
-    #Home,
-    #About,
-    #Contact {
+
+    #Contact,
+    #About {
         display: none;
     }
 
-    #Home,
-    #About,
-    #Contact {
-        margin-top: 6.5rem;
-        margin-left: 4rem;
-        /* border-top-left-radius: 50%; */
-        /* border-bottom-left-radius: 5%; */
-        /* border: 2px solid rgba(0, 0, 0, 0.048); */
-        min-height: 85vh;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        padding: 20rem;
-        font-size: 4rem;
-    }
+    /* font-size: 4rem; */
 </style>
 
 <body>
 
-    
+
     <section>
         <div class="header">
-            <div class="burger" onclick="navigationBar()">
+            <div class="burger" id="burger" onclick="navigationBar()">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <h1>
-                HolY TeaR
+            <h1 id="logo">
+                <i onclick="homeCnt()">
+                    HolY TeaR
+                </i>
             </h1>
             <div id="searchDiv">
                 <form action="" method="get">
@@ -61,13 +49,13 @@
             </div>
         </div>
     </section>
-    <div Id="navBar">
-        <i class="navItem" onclick="homeCnt()">Home</i>
-        <i class="navItem" onclick="aboutCnt()">About</i>
-        <i class="navItem" onclick="contactCnt()">Contact</i>
+    <div id="navBar">
+        <i class="navItem active" id="homeNavItem" onclick="homeCnt()">Home</i>
+        <i class="navItem" id="aboutNavItem" onclick="aboutCnt()">About</i>
+        <i class="navItem" id="contactNavItem" onclick="contactCnt()">Contact</i>
     </div>
     <section class="Container" onclick="hideNavigationBar()">
-        <div id="load">
+        <!-- <div id="load">
             <div class="loader" onclick="homeCnt()">
                 <span style="--i:1;"></span>
                 <span style="--i:2;"></span>
@@ -80,7 +68,7 @@
                 <span style="--i:9;"></span>
                 <span style="--i:10;"></span>
             </div>  
-        </div>     
+        </div>      -->
         <div id="Home">
             <h2>
                 Welcome To Our Website
@@ -88,16 +76,19 @@
 
         </div>
         <div id="About">
-            <h2>
-                About Page
-            </h2>
 
         </div>
         <div id="Contact">
-            <h2>
-                Contact Page
-            </h2>
-
+            <section class="formSection">
+                <form class="formPart" action="/" method="">
+                    <h3 id="FormTitle">Enter Details here</h3>
+                    <input class="ibox" type="text" name="name" id="name" placeholder="Enter your name">
+                    <input class="ibox" type="text" name="email" id="email" placeholder="Enter your Email address">
+                    <input class="ibox" type="phone" name="phone" id="phone" placeholder="Enter your phone number">
+                    <textarea class="ibox" name="mess" id="mess" cols='22' rows='5' placeholder="Enter your message here"></textarea>
+                    <button class="btn" type="submit">Submit Details</button>
+                </form>
+            </section>
         </div>
     </section>
 </body>
